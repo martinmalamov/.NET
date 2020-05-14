@@ -1,0 +1,59 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace Arrays
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] num1 = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+            int[] num2 = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+
+            int sum = 0;
+            bool isTrue = false;
+            int failIndex = 0;
+
+            for (int i = 0; i < num1.Length; i++)
+            {
+                if (num1[i] == num2[i])
+                {
+                    sum += num1[i];
+                    isTrue = true;
+                }
+                if (num1[i] != num2[i])
+                {
+                    if (num1.Length == 1)
+                    {
+                        if (num2[i] < num1[i])
+                        {
+                            failIndex = num2.Length - 1;
+                            break;
+                        }
+                        failIndex = num1.Length;
+                        failIndex--;
+                        break;
+                    }
+                    if (num1.Length == num2.Length)
+                    {
+                        failIndex = num1[i - 1];
+
+
+                    }
+                    isTrue = false;
+
+                    break;
+                }
+            }
+            if (isTrue == false)
+            {
+                Console.WriteLine($"Arrays are not identical. Found difference at {failIndex} index");
+            }
+            if (isTrue == true)
+            {
+                Console.WriteLine($"Arrays are identical. Sum: {sum}");
+            }
+        }
+    }
+}

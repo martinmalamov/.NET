@@ -1,0 +1,45 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace Arrays
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+        //sample input -> 4
+        //                 1 5
+        //                 9 10                    
+        //                 31 81
+        //                 41 20
+        // result =>  1 10 31 20 , 5 9 81 41
+        
+            int n = int.Parse(Console.ReadLine());
+            int[] numbersOdd = new int[n];
+            int[] numbersEven = new int[n];
+
+            for (int i = 0; i < n; i++)
+            {
+                int[] arrNum = Console.ReadLine().Split().Select(int.Parse).ToArray();
+
+                for (int j = 0; j < n / 2; j++)
+                {
+
+                    if (i % 2 != 0)
+                    {
+                        numbersOdd[i] = arrNum[0];
+                        numbersEven[i] = arrNum[1];
+                    }
+                    if (i % 2 == 0)
+                    {
+                        numbersOdd[i] = arrNum[1];
+                        numbersEven[i] = arrNum[0];
+                    }
+                }
+            }
+            Console.WriteLine(string.Join(" ", numbersEven));
+            Console.WriteLine(string.Join(" ", numbersOdd));
+        }
+    }
+}
