@@ -1,0 +1,327 @@
+USE [SubqueriesDemo]
+GO
+/****** Object:  Table [dbo].[People]    Script Date: 06-Oct-17 16:04:10 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[People](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[FirstName] [varchar](50) NOT NULL,
+	[LastName] [varchar](50) NOT NULL,
+	[Phone] [numeric](10, 0) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET IDENTITY_INSERT [dbo].[People] ON 
+
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (1, N'Mellie', N'Papachristophorou', CAST(1562329073 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (2, N'Thom', N'Cowdroy', CAST(8501731382 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (3, N'Thomasina', N'Newland', CAST(2845159870 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (4, N'Dennie', N'McMackin', CAST(7826751209 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (5, N'De', N'Dimitru', CAST(520559223 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (6, N'Waldo', N'Gimblet', CAST(619286040 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (7, N'Batsheva', N'Warret', CAST(1994733098 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (8, N'Olenolin', N'Ondricek', CAST(6304840845 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (9, N'Parry', N'Sporgeon', CAST(6524419804 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (10, N'Emmalynn', N'Hart', CAST(7645356944 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (11, N'Torrence', N'Bowering', CAST(5697737637 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (12, N'Jourdan', N'Sollom', CAST(4365780999 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (13, N'Halimeda', N'Olver', CAST(6432118980 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (14, N'Sammy', N'Carruth', CAST(1925743772 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (15, N'Jarad', N'Form', CAST(4137552045 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (16, N'Beitris', N'Peasegod', CAST(9013502695 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (17, N'Eward', N'Tanman', CAST(2506204377 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (18, N'Jeremiah', N'Margrem', CAST(453642020 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (19, N'Burk', N'Westrip', CAST(8904053684 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (20, N'Hans', N'Libbis', CAST(3628423848 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (21, N'Parrnell', N'Branney', CAST(1706751613 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (22, N'Franciskus', N'Lawling', CAST(7662015416 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (23, N'Averil', N'Decourt', CAST(92307744 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (24, N'Ned', N'Jansson', CAST(981380530 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (25, N'Dewie', N'Abethell', CAST(9305791514 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (26, N'Happy', N'Shayler', CAST(3012239650 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (27, N'Isahella', N'Simison', CAST(8367985397 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (28, N'Elaine', N'Greenhowe', CAST(1728931177 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (29, N'Harrie', N'Fevre', CAST(983183554 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (30, N'Flem', N'Bentzen', CAST(5050312019 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (31, N'Tatum', N'Lionel', CAST(7054377427 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (32, N'Madelaine', N'Habbes', CAST(2253513849 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (33, N'Rodney', N'Lindegard', CAST(2153149347 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (34, N'Preston', N'Gilhooley', CAST(6218998002 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (35, N'Lianna', N'Boag', CAST(1182762778 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (36, N'Erik', N'Pinke', CAST(9717709173 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (37, N'Christen', N'Clampe', CAST(2528133553 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (38, N'Barret', N'Colin', CAST(8790558820 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (39, N'Toddy', N'Caldecourt', CAST(3478871506 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (40, N'Giorgia', N'Garrood', CAST(7771346995 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (41, N'Tatum', N'Pirazzi', CAST(174740336 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (42, N'Armstrong', N'Picopp', CAST(5556806985 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (43, N'Minerva', N'Longmire', CAST(8439771096 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (44, N'Lulita', N'Parriss', CAST(8581463533 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (45, N'Seline', N'Parriss', CAST(7197910609 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (46, N'Tad', N'Govan', CAST(1836134045 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (47, N'Alysia', N'Westrip', CAST(8524342277 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (48, N'Vern', N'Climer', CAST(6487308196 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (49, N'Torrence', N'Willoughway', CAST(1657079333 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (50, N'Catriona', N'Commucci', CAST(8369922953 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (51, N'Tillie', N'Fitzsymons', CAST(6191325398 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (52, N'Bree', N'Marshall', CAST(1665588799 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (53, N'Thorvald', N'Cheley', CAST(3566869252 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (54, N'Honor', N'Leber', CAST(4809243982 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (55, N'Ives', N'Ximenez', CAST(3729687247 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (56, N'Shelly', N'De', CAST(1688605827 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (57, N'Lora', N'Bowering', CAST(3734607701 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (58, N'Meagan', N'Edmeades', CAST(7913428929 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (59, N'Kerk', N'Colin', CAST(929080599 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (60, N'Dorine', N'Vass', CAST(7262782568 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (61, N'Ricard', N'Mosdall', CAST(4344388267 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (62, N'Gregoor', N'Lionel', CAST(528720031 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (63, N'Orbadiah', N'Siggs', CAST(5787005708 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (64, N'Jacenta', N'Danson', CAST(7502398953 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (65, N'Taddeo', N'Scarce', CAST(1810267072 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (66, N'Rhiamon', N'Ivermee', CAST(1135552398 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (67, N'Dennie', N'Batrim', CAST(1374966398 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (68, N'Caitrin', N'Longman', CAST(3713928371 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (69, N'Sharyl', N'Lanphier', CAST(6097495994 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (70, N'Halimeda', N'Cellier', CAST(6322487442 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (71, N'Nathanil', N'Huske', CAST(7645356944 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (72, N'Lazare', N'Fazackerley', CAST(9359940763 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (73, N'Gabbey', N'Davydochkin', CAST(7325230036 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (74, N'Thorvald', N'Wards', CAST(7517644270 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (75, N'Erminia', N'Peachment', CAST(6779066176 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (76, N'Nikos', N'Simoncelli', CAST(6454903192 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (77, N'Kristel', N'Boorne', CAST(6290507 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (78, N'Gregoor', N'Kerner', CAST(2836879521 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (79, N'Saxon', N'McKleod', CAST(4683341557 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (80, N'Colene', N'Ricker', CAST(7517644270 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (81, N'Claudia', N'Tommaseo', CAST(3769015541 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (82, N'Roseanna', N'McQuirk', CAST(778145530 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (83, N'Bernard', N'Insworth', CAST(1242383093 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (84, N'Gennifer', N'Rosenstiel', CAST(3683472049 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (85, N'Clayton', N'Hadenton', CAST(9491911511 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (86, N'Marita', N'Papachristophorou', CAST(290926211 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (87, N'Rania', N'Warret', CAST(6487308196 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (88, N'Elijah', N'Fitzsymons', CAST(1242383093 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (89, N'Winona', N'Cawthera', CAST(2528133553 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (90, N'Friedrich', N'Bozward', CAST(9539439760 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (91, N'Otis', N'Perree', CAST(7762060138 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (92, N'Yolane', N'Sprake', CAST(9643336379 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (93, N'Batholomew', N'Waterland', CAST(2728306036 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (94, N'Germana', N'Phelipeau', CAST(7517644270 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (95, N'Artemis', N'Simison', CAST(7262782568 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (96, N'Pincus', N'Fanthom', CAST(2528133553 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (97, N'Bendicty', N'Lawling', CAST(2283824613 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (98, N'Bourke', N'Ilbert', CAST(72869399 AS Numeric(10, 0)))
+INSERT [dbo].[People] ([Id], [FirstName], [LastName], [Phone]) VALUES (99, N'Jourdan', N'Ambrosoni', CAST(8519154816 AS Numeric(10, 0)))
+GO
+
+
+USE [SoftUni]
+
+SELECT * FROM Employees
+SELECT * FROM Addresses
+SELECT * FROM Towns
+
+
+-----ex1-----------
+SELECT TOP(5) EmployeeID, JobTitle , e.AddressID,AddressText
+FROM Employees AS e
+INNER JOIN Addresses AS a
+ON e.AddressID = a.AddressID
+ORDER BY AddressID ASC
+
+------2----------
+SELECT TOP(50)e.FirstName,e.LastName,t.Name AS Town,a.AddressText
+FROM Employees as e
+JOIN Addresses a 
+ON e.AddressID = a.AddressID 
+JOIN Towns AS t
+ON a.TownID = t.TownID
+ORDER BY e.FirstName ASC,e.LastName 
+
+---------3---------
+SELECT * FROM Departments
+SELECT * FROM Employees
+
+SELECT e.EmployeeID , e.FirstName,e.LastName , d.Name AS  DepartmentName
+FROM Employees AS e
+JOIN Departments AS d
+ON e.DepartmentID = d.DepartmentID
+WHERE d.Name = 'Sales'
+
+-----4------
+SELECT TOP(5) e.EmployeeID , e.FirstName,e.Salary , d.Name AS  DepartmentName
+FROM Employees AS e
+JOIN Departments AS d
+ON e.DepartmentID = d.DepartmentID
+WHERE d.Name = 'Engineering' AND e.Salary > 15000
+
+
+-------5--------
+SELECT * FROM Employees
+SELECT * FROM EmployeesProjects
+
+SELECT TOP(3) e.EmployeeID , FirstName
+FROM Employees as e 
+LEFT OUTER JOIN EmployeesProjects  as EP 
+ON EP.EmployeeID = e.EmployeeID
+WHERE EP.ProjectID IS  NULL
+ORDER BY EmployeeID
+
+-------6---------
+SELECT E.FirstName,E.LastName,E.HireDate,D.Name AS DeptName
+FROM Employees AS E
+INNER  JOIN Departments AS D
+ON (e.DepartmentID  = d.DepartmentID AND
+E.HireDate > '1/1/1999'  AND D.Name IN ('Sales' ,'Finance'))
+ORDER BY HireDate ASC
+
+------7--------
+SELECT * FROM Employees
+SELECT * FROM Projects
+SELECT * FROM EmployeesProjects
+
+SELECT TOP(5) e.EmployeeID,e.FirstName, p.Name AS ProjectName
+FROM Employees AS e
+JOIN EmployeesProjects AS ep
+ON e.EmployeeID = ep.EmployeeID
+JOIN Projects AS p
+ON ep.ProjectID = p.ProjectID
+WHERE p.StartDate > '2002/08/13' AND p.EndDate IS NULL 
+ORDER BY EmployeeID
+
+--------8--------
+SELECT e.EmployeeID,e.FirstName ,
+     CASE 
+	 WHEN p.StartDate > '01/01/2005'  THEN NULL
+	 else p.Name
+	 END
+	       AS ProjectName
+
+FROM Employees as e
+JOIN EmployeesProjects  as ep
+ON ep.EmployeeID = e.EmployeeID
+JOIN  Projects as p
+ON  ep.ProjectID = p.ProjectID
+WHERE  e.EmployeeID =24
+
+-------9----------
+--SELECT * FROM Projects
+
+SELECT * FROM Employees
+SELECT * FROM EmployeesProjects
+
+
+SELECT e.EmployeeID,e.FirstName,ep.EmployeeID AS ManagerID,ep.FirstName AS ManagerName
+FROM Employees AS e
+JOIN Employees AS ep
+ON ep.EmployeeID = e.ManagerID
+WHERE e.ManagerID IN (3,7)
+ORDER BY EmployeeID ASC
+
+
+--------10----------
+Select * from departments
+select * from Employees
+
+SELECT e.EmployeeID,e.FirstName + ' ' + e.LastName AS EmployeeName,
+m.FirstName + ' ' + m.LastName AS ManagrName, 
+d.Name AS DepartmentName
+FROM Employees AS e
+JOIN Employees AS m  ON m.EmployeeID = e.ManagerID
+JOIN Departments AS d ON  d.DepartmentID = e.DepartmentID
+
+--------11---------
+SELECT * FROM Employees
+SELECT * FROM NewEmployees
+
+SELECT 
+MIN(a.AverageSalary) AS MinAverageSalary
+FROM
+(
+    SELECT e.DepartmentID,
+	    AVG(e.Salary) AS AverageSalary
+	FROM Employees AS e
+	GROUP BY e.DepartmentID
+) AS a
+
+--------12--------
+USE [Geography]
+
+SELECT * FROM MountainsCountries
+SELECT * FROM Mountains
+SELECT * FROM Peaks
+
+SELECT mc.CountryCode , m.MountainRange, p.PeakName ,p.Elevation
+FROM Mountains AS m
+JOIN  Peaks AS  p
+ON m.Id = p.MountainId
+JOIN MountainsCountries AS mc
+ON m.Id = mc.MountainId 
+WHERE p.Elevation  > 2835 AND
+mc.CountryCode = 'BG'
+ORDER BY Elevation DESC
+
+-----13----------
+SELECT * FROM MountainsCountries
+SELECT * FROM Mountains
+
+SELECT mc.CountryCode , COUNT(mc.CountryCode) AS 'MountainRange'
+FROM MountainsCountries AS mc
+JOIN Mountains AS m 
+ON m.ID = mc.MountainId
+WHERE mc.CountryCode IN( 'BG' , 'RU','US')
+GROUP BY mc.CountryCode
+
+------14--------
+SELECT * FROM COUNTRIES 
+SELECT * FROM COUNTRIESRIVERS
+SELECT * FROM RIVERS
+
+SELECT TOP(5) C.CountryName , R.RiverName
+FROM Countries AS C
+LEFT OUTER JOIN CountriesRivers AS CR 
+ON C.COUNTRYCODE = CR.CountryCode
+LEFT OUTER JOIN RIVERS AS R 
+ON  CR.RIVERID = R.ID
+WHERE C.CONTINENTCODE = 'AF'
+ORDER BY C.COUNTRYNAME
+
+-----15--------
+
+
+-----16-------
+SELECT * FROM COUNTRIES 
+SELECT * FROM MOUNTAINSCOUNTRIES
+
+
+SELECT COUNT(c.CountryCode)
+FROM  Countries AS c
+LEFT OUTER JOIN MountainsCountries AS m 
+ON c.CountryCode = m.CountryCode 
+WHERE m.MountainID IS NULL
+
+
+-----17--------
+SELECT * FROM RIVERS
+SELECT * FROM COUNTRIESRIVERS
+SELECT * FROM COUNTRIES
+SELECT * FROM MOUNTAINSCOUNTRIES
+SELECT * FROM PEAKS
+
+SELECT  TOP(5) c.CountryName , MAX(p.Elevation) AS HighestPeakElevation , MAX(r.[Length]) AS LongestRiverLength
+FROM Countries AS c
+LEFT OUTER JOIN COUNTRIESRIVERS AS cr
+ON  c.CountryCode  = cr.Countrycode
+LEFT OUTER JOIN Rivers AS r 
+ON cr.RiverId = r.Id
+LEFT OUTER JOIN MountainsCountries AS mc
+ON c.CountryCode = mc.CountryCode
+LEFT OUTER JOIN Peaks AS p
+ON mc.MountainId = p.MountainId
+GROUP BY c.CountryName
+ORDER BY [HighestPeakElevation] DESC , [LongestRiverLength] DESC, c.C

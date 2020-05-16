@@ -1,0 +1,574 @@
+CREATE DATABASE Bank
+GO
+USE Bank
+GO
+CREATE TABLE AccountHolders
+(
+Id INT NOT NULL,
+FirstName VARCHAR(100) NOT NULL,
+LastName VARCHAR(100) NOT NULL,
+SSN CHAR(10) NOT NULL
+CONSTRAINT PK_AccountHolders PRIMARY KEY (Id)
+)
+
+CREATE TABLE Accounts
+(
+Id INT NOT NULL,
+AccountHolderId INT NOT NULL,
+Balance MONEY DEFAULT 0
+CONSTRAINT PK_Accounts PRIMARY KEY (Id)
+CONSTRAINT FK_Accounts_AccountHolders FOREIGN KEY (AccountHolderId) REFERENCES AccountHolders(Id)
+)
+
+INSERT INTO AccountHolders (Id, FirstName, LastName, SSN) VALUES (1, 'Susan', 'Cane', '1234567890');
+INSERT INTO AccountHolders (Id, FirstName, LastName, SSN) VALUES (2, 'Kim', 'Novac', '1234567890');
+INSERT INTO AccountHolders (Id, FirstName, LastName, SSN) VALUES (3, 'Jimmy', 'Henderson', '1234567890');
+INSERT INTO AccountHolders (Id, FirstName, LastName, SSN) VALUES (4, 'Steve', 'Stevenson', '1234567890');
+INSERT INTO AccountHolders (Id, FirstName, LastName, SSN) VALUES (5, 'Bjorn', 'Sweden', '1234567890');
+INSERT INTO AccountHolders (Id, FirstName, LastName, SSN) VALUES (6, 'Kiril', 'Petrov', '1234567890');
+INSERT INTO AccountHolders (Id, FirstName, LastName, SSN) VALUES (7, 'Petar', 'Kirilov', '1234567890');
+INSERT INTO AccountHolders (Id, FirstName, LastName, SSN) VALUES (8, 'Michka', 'Tsekova', '1234567890');
+INSERT INTO AccountHolders (Id, FirstName, LastName, SSN) VALUES (9, 'Zlatina', 'Pateva', '1234567890');
+INSERT INTO AccountHolders (Id, FirstName, LastName, SSN) VALUES (10, 'Monika', 'Miteva', '1234567890');
+INSERT INTO AccountHolders (Id, FirstName, LastName, SSN) VALUES (11, 'Zlatko', 'Zlatyov', '1234567890');
+INSERT INTO AccountHolders (Id, FirstName, LastName, SSN) VALUES (12, 'Petko', 'Petkov Junior', '1234567890');
+
+INSERT INTO Accounts (Id, AccountHolderId, Balance) VALUES (1, 1, 123.12);
+INSERT INTO Accounts (Id, AccountHolderId, Balance) VALUES (2, 3, 4354.23);
+INSERT INTO Accounts (Id, AccountHolderId, Balance) VALUES (3, 12, 6546543.23);
+INSERT INTO Accounts (Id, AccountHolderId, Balance) VALUES (4, 9, 15345.64);
+INSERT INTO Accounts (Id, AccountHolderId, Balance) VALUES (5, 11, 36521.20);
+INSERT INTO Accounts (Id, AccountHolderId, Balance) VALUES (6, 8, 5436.34);
+INSERT INTO Accounts (Id, AccountHolderId, Balance) VALUES (7, 10, 565649.20);
+INSERT INTO Accounts (Id, AccountHolderId, Balance) VALUES (8, 11, 999453.50);
+INSERT INTO Accounts (Id, AccountHolderId, Balance) VALUES (9, 1, 5349758.23);
+INSERT INTO Accounts (Id, AccountHolderId, Balance) VALUES (10, 2, 543.30);
+INSERT INTO Accounts (Id, AccountHolderId, Balance) VALUES (11, 3, 10.20);
+INSERT INTO Accounts (Id, AccountHolderId, Balance) VALUES (12, 7, 245656.23);
+INSERT INTO Accounts (Id, AccountHolderId, Balance) VALUES (13, 5, 5435.32);
+INSERT INTO Accounts (Id, AccountHolderId, Balance) VALUES (14, 4, 1.23);
+INSERT INTO Accounts (Id, AccountHolderId, Balance) VALUES (15, 6, 0.19);
+INSERT INTO Accounts (Id, AccountHolderId, Balance) VALUES (16, 2, 5345.34);
+INSERT INTO Accounts (Id, AccountHolderId, Balance) VALUES (17, 11, 76653.20);
+INSERT INTO Accounts (Id, AccountHolderId, Balance) VALUES (18, 1, 235469.89);
+
+
+--------ProgrammabilityAndTransactions------------
+
+CREATE OR ALTER FUNCTION udf_ProjectDurationWeeks (@StartDate DATETIME, @EndDate DATETIME)
+RETURNS INT
+AS
+BEGIN
+  DECLARE @projectWeeks INT;
+  IF(@EndDate IS NULL)
+  BEGIN
+    SET @EndDate = GETDATE()
+  END
+  SET @projectWeeks = DATEDIFF(WEEK, @StartDate, @EndDate)
+  RETURN @projectWeeks;
+END
+
+SELECT [ProjectID],
+       [StartDate],
+       [EndDate],
+       dbo.udf_ProjectDurationWeeks([StartDate],[EndDate])
+    AS ProjectWeeks
+  FROM [SoftUni].[dbo].[Projects]
+
+  ---------ex.From.Presentation---------
+  USE [SoftUni]
+  SELECT FIRSTNAME  FROM SoftUni
+
+  CREATE OR ALTER  FUNCTION udf_GetSalaryLevel (@salary INT)
+   RETURNS nVARCHAR(10)
+  AS
+  BEGIN 
+      DECLARE @salaryLevel  VARCHAR(10)
+	  IF (@salary < 30000)
+		SET @salaryLevel = 'low'   
+	  ELSE IF (@salary > 30000 AND @salaryLevel <= 50000)
+		SET @salaryLevel = 'average'
+	  ELSE 
+		SET @salaryLevel = 'high'   
+		
+		RETURN @salaryLevel;   
+  END;
+
+  SELECT  FirstName,LastName,Salary,
+		  dbo.udf_GetSalaryLevel ([salary])
+		  AS SalaryLevel
+ FROM [SoftUni].[dbo].[Employees]
+ 
+ 
+ ---------ex1---------
+ CREATE  PROC	usp_GetEmployeesSalaryAbove35000
+ AS 
+    SELECT FirstName,LastName
+	FROM Employees
+	WHERE Salary > 35000
+	
+
+EXEC dbo.usp_GetEmployeesSalaryAbove35000
+
+---------ex2---------
+CREATE  PROCEDURE usp_GetEmployeesSalaryAboveNumber(@number DECIMAL(18,4))
+      as
+	  begin
+	  SELECT FirstName ,LastName 
+	  FROM Employees
+	  WHERE Salary >=  @number
+      end;
+	  EXEC usp_GetEmployeeSalaryAboveNumber 48100;
+
+----------3------------
+CREATE or alter  PROC usp_GetTownsStartingWith (@parameter NVARCHAR)
+     as
+	 BEGIN
+	        SELECT Name
+			FROM  Towns
+			WHERE  Name  LIKE @parameter + '%'
+	 END
+      
+	  exec dbo.usp_GetTownsStartingWith @parameter = 'b'
+ 
+ -------4----------
+ CREATE OR ALTER PROC usp_GetEmployeesFromTown (@TownName NVARCHAR(30))
+      AS 
+	  BEGIN 
+	       SELECT FirstName , LastName
+		   FROM Employees e
+		   JOIN  Addresses a ON e.AddressID = a.AddressID
+		   JOIN Towns  t ON a.TownID = t.TownID
+		   WHERE t.Name = @TownName
+	  END
+
+	  EXEC usp_GetEmployeesFromTown  'Sofia'
+
+
+--------5--------------
+CREATE FUNCTION ufn_GetSalaryLevel(@salary DECIMAL(18,4))
+   RETURNS VARCHAR(7) AS
+   BEGIN
+           DECLARE @salaryLevel NVARCHAR(30)
+		   IF (@salary < 30000)
+		   SET @salaryLevel = 'Low'
+			ELSE IF (@salary >= 30000 AND @salary < 50000)
+			 SET @salaryLevel = 'Average'
+			 ELSE
+			 SET @salaryLevel = 'High'
+			 RETURN @salaryLevel
+   END
+
+   SELECT Salary , dbo.ufn_GetSalaryLevel([salary]) AS SalaryLevel
+  FROM [SoftUni].[dbo].[Employees]
+  
+   ----------6----------
+  CREATE PROC usp_EmployeesBySalaryLevel(@level VARCHAR(7)) AS
+  BEGIN
+         SELECT FirstName,LastName
+		 FROM Employees
+		 WHERE dbo.ufn_GetSalaryLevel(Salary) = @level
+  END
+
+  EXEC dbo.usp_EmployeesBySalaryLevel 'High'
+
+  -----------7----------
+  --CREATE or alter  FUNCTION ufn_IsWordComprised(@setOfLetters  NVARCHAR(30), @word NVARCHAR(50))
+  --RETURNS BIT AS
+  --    BEGIN 
+	 --      IF @word LIKE'%[^' + @setOfLetters + ']% ' 
+		--         RETURN 0 
+		--   RETURN 1
+	 -- END 
+
+	CREATE FUNCTION ufn_IsWordComprised(@setOfLetters NVARCHAR(MAX), @word NVARCHAR(MAX))
+  RETURNS BIT
+AS
+  BEGIN
+    DECLARE @isComprised BIT = 0;
+    DECLARE @currentIndex INT = 1;
+    DECLARE @currentChar CHAR;
+
+    WHILE (@currentIndex <= LEN(@word))
+      BEGIN
+        SET @currentChar = substring(@word, @currentIndex, 1);
+        IF (charindex(@currentChar, @setOfLetters) = 0)
+          BEGIN
+            RETURN @isComprised;
+          END
+        SET @currentIndex+= 1;
+      END
+
+    RETURN @isComprised + 1;
+  END
+
+SELECT dbo.ufn_IsWordComprised('oistmiahf', 'halves')
+
+---------8--------
+
+-------9----------
+USE [Bank]
+
+CREATE  PROCEDURE usp_GetHoldersFullName
+  AS
+  SELECT FirstName + ' ' + LastName as [Full Name]
+    FROM AccountHolders
+
+	EXEC  dbo.usp_GetHoldersFullName 
+
+---------10---------
+	CREATE or alter PROC usp_GetHoldersWithBalanceHigherThan (@Number DECIMAL(16,2))
+	AS
+	BEGIN 
+	      SELECT h.FirstName , h.LastName
+		  FROM AccountHolders AS h
+		  JOIN Accounts AS a 
+		  ON h.Id = a.AccountHolderId
+		  GROUP BY h.Id , h.FirstName, h.LastName
+		  HAVING SUM(a.Balance) > @Number
+		  ORDER BY h.FirstName, h.LastName
+
+	END
+
+	EXEC dbo.usp_GetHoldersWithBalanceHigherThan  5000	
+
+	SELECT * FROM AccountHolders
+	SELECT * FROM Accounts
+
+-----------11--------
+CREATE FUNCTION ufn_CalculateFutureValue(@Sum DECIMAL(15,4),@YearlyInterestRate FLOAT,@NumberOfYears INT)
+RETURNS DECIMAL(15,4)
+AS
+BEGIN
+       RETURN @Sum*(POWER(1+ @YearlyInterestRate ,@NumberOfYears))
+END
+
+SELECT dbo.ufn_CalculateFutureValue(1000, 0.10, 5) AS Result
+
+-------12-----------
+CREATE OR ALTER  PROC usp_CalculateFutureValueForAccount(@AccountId  INT , @InterestRate FLOAT)
+AS
+BEGIN
+      DECLARE @Years INT  = 5;
+
+	  SELECT a.Id  AS [Account Id] , 
+	         a.Balance AS [Current Balance] , 
+			 ah.FirstName AS [First Name]  , 
+			 ah.LastName AS [Last Name] , 
+			 dbo.ufn_CalculateFutureValue(a.Balance ,@InterestRate , @Years)
+			  AS  [Balance in 5 years]
+			  FROM AccountHolders AS ah
+			  JOIN Accounts AS a 
+			  ON ah.Id = a.AccountHolderId
+			  WHERE a.Id = @AccountId
+END
+
+EXEC usp_CalculateFutureValueForAccount 1, 0.10
+       ----OTHER SOLUTION!!!
+CREATE PROC usp_CCalculateFutureValueForAccount(@accountId INT, @interestRate FLOAT) AS
+BEGIN
+	SELECT a.Id, h.FirstName, h.LastName, a.Balance, dbo.ufn_CalculateFutureValue(a.Balance, @interestRate, 5)
+	FROM Accounts a
+	JOIN AccountHolders h ON a.AccountHolderId = h.Id
+	WHERE a.Id = @accountId
+END
+
+
+
+----------13-----------
+USE [Diablo]
+
+SELECT * FROM CHARACTERS
+SELECT * FROM GAMES
+SELECT * FROM USERSGAMES
+
+CREATE  FUNCTION ufn_CashInUsersGames(@GameName NVARCHAR(50))
+RETURNS Table
+AS 
+     RETURN SELECT SUM(Cash) AS SumCash
+	 FROM (
+	          SELECT ug.Cash,
+			  ROW_NUMBER()
+			  OVER (ORDER BY ug.Cash DESC) AS RowNum
+			  FROM UsersGames AS ug
+			  INNER JOIN Games AS g
+			  ON ug.GameId = g.Id
+			  WHERE g.Name = @GameName
+	 ) AS SumCash
+	 WHERE RowNum % 2 = 1
+
+
+	 SELECT * FROM
+       dbo.ufn_CashInUsersGames('Love in a mist')
+
+	   -----TRIGGERS-----------
+---------ex14----------
+USE [Bank]
+CREATE TABLE Logs(
+    LogId INT   IDENTITY NOT NULL,
+	AccountId INT NOT NULL , 
+	OldSum MONEY NOT NULL , 
+	NewSum MONEY  NOT NULL
+) 
+DROP TABLE Logs
+
+ CREATE TRIGGER InsertNewEntryIntoLogss
+  ON Accounts
+  AFTER UPDATE
+AS
+ BEGIN
+	INSERT INTO Logs (AccountId, OldSum, NewSum)
+	SELECT i.Id, d.Balance, i.Balance
+	FROM inserted i, deleted d
+END
+
+UPDATE Accounts SET Balance = 100 WHERE  Id = 1
+SELECT * FROM Logs
+----------15-----------
+CREATE TABLE NotificationEmails(
+         Id INT IDENTITY  NOT NULL ,
+		 Recipient INT , 
+		 Subject NVARCHAR(MAX),
+		 Body NVARCHAR(MAX)
+)
+drop table NotificationEmails
+
+CREATE TRIGGER NewEmail
+ON Logs
+AFTER INSERT
+AS 
+   BEGIN 
+         INSERT INTO NotificationEmails
+		 VALUES
+		 (
+		     (SELECT AccountId 
+			 FROM inserted ),
+			 (CONCAT('Balance change for account: ',(SELECT AccountId  FROM inserted))),
+
+			 (CONCAT('On ',(SELECT GETDATE()FROM inserted),'your balance was changed from ',
+			 (SELECT OldSum FROM inserted ), 'to ', (SELECT NewSum FROM inserted), '.'))
+	)
+		 
+   END
+
+   UPDATE Accounts SET  Balance = 100 WHERE Id = 1
+
+   SELECT * FROM NotificationEmails
+
+ ---------16-----------
+ CREATE PROC usp_DepositMoney(@AccountId INT , @MoneyAmount DECIMAL(16,4))
+ AS 
+ BEGIN TRANSACTION 
+      UPDATE Accounts
+	  SET Balance += @MoneyAmount
+	  WHERE Id = @AccountId
+	  COMMIT
+
+	  EXEC usp_DepositMoney @accountId = 10 , @MoneyAmount = 10
+	  SELECT * FROM Logs
+
+--------17------
+CREATE PROC usp_WithdrawMoney(@AccountId INT , @MoneyAmount DECIMAL(16,4))
+ AS 
+ BEGIN TRANSACTION 
+      UPDATE Accounts
+	  SET Balance -= @MoneyAmount
+	  WHERE Id = @AccountId
+	  COMMIT
+
+	   EXEC usp_WithdrawMoney @accountId = 5 , @MoneyAmount = 25
+	  SELECT * FROM Logs
+
+--------18---------
+CREATE PROC usp_TransferMoney(@SenderId INT , @ReceiverId INT , @Amount DECIMAL(16,4))
+AS
+BEGIN
+      BEGIN TRANSACTION 
+       EXEC usp_WithdrawMoney @SenderId , @Amount
+       EXEC usp_DepositMoney @ReceiverId , @Amount
+
+	   IF ((SELECT Balance FROM Accounts 
+	   WHERE Accounts.Id = @SenderId ) < 0)
+	       BEGIN
+	             ROLLBACK 
+           END
+	   ELSE
+	       BEGIN
+		        COMMIT
+           END
+END
+
+EXEC  dbo.usp_TransferMoney @SenderId = 1 , @ReceiverId = 1 , @Amount  = 5000
+SELECT * FROM Accounts
+
+---------19-----------
+USE [Diablo]
+exec  sp_changedbowner 'sa'
+
+---------20-------------
+DECLARE @gameName NVARCHAR(50)   = 'Safflower'
+DECLARE @userName NVARCHAR(50)   =  'Stamat'
+
+DECLARE @userGameId INT   = (
+        SELECT ug.Id 
+		FROM UsersGames AS ug
+		JOIN Users AS u  ON ug.Id = u.Id
+		JOIN Games AS g ON ug.GameId  = g.Id
+		WHERE u.Username = @userName  AND 
+		g.Name = @gameName
+)
+
+DECLARE @userGameLevel INT = (
+        SELECT Level
+		FROM UsersGames
+		WHERE Id = @userGameId )
+
+DECLARE @itemCost MONEY ,  @availableCash Money , @minLevel INT  , @maxLevel INT 
+
+SET @minLevel = 11 
+SET @maxLevel = 12 
+
+
+SET @availableCash = (SELECT Cash
+                      FROM  UsersGames 
+					  WHERE Id = @userGameId 
+		  )
+
+SET @itemCost = (SELECT SUM(Price)
+                 FROM Items
+				 WHERE MinLevel BETWEEN @minLevel AND @maxLevel
+			)
+
+IF (@availableCash >= @itemCost AND @userGameLevel >= @maxLevel)
+   BEGIN
+         BEGIN TRANSACTION
+         UPDATE UsersGames
+		 SET Cash -= @itemCost
+		 WHERE Id = @userGameId
+		  IF(@@ROWCOUNT <> 1 )
+			BEGIN 
+			      ROLLBACK
+				  RAISERROR('Could not make payment',16,1) 
+			END
+           ELSE
+		   BEGIN
+		       INSERT INTO UserGameItems(ItemId,UserGameId)
+			   (
+			      SELECT Id,
+				         @userGameId
+				  FROM Items
+				  WHERE MinLevel BETWEEN @minLevel AND @maxLevel
+			   )
+
+		   IF((SELECT COUNT(*) 
+		      FROM  Items
+			  WHERE MinLevel BETWEEN @minLevel AND @maxLevel) <> @@ROWCOUNT)
+			  BEGIN
+			     ROLLBACK;
+				 RAISERROR ('Could not buy items',16,1)
+			  END
+			ELSE 
+			 COMMIT;
+	 END
+   END
+
+
+
+SET @minLevel = 19
+SET @maxLevel = 21
+SET @availableCash = (SELECT Cash
+                      FROM UsersGames
+                      WHERE Id = @userGameId)
+SET @itemsCost = (SELECT SUM(Price)
+                  FROM Items
+                  WHERE MinLevel BETWEEN @minLevel AND @maxLevel)
+
+IF (@availableCash >= @itemsCost AND @userGameLevel >= @maxLevel)
+
+  BEGIN
+    BEGIN TRANSACTION
+    UPDATE UsersGames
+    SET Cash -= @itemsCost
+    WHERE Id = @userGameId
+
+    IF (@@ROWCOUNT <> 1)
+      BEGIN
+        ROLLBACK
+        RAISERROR ('Could not make payment', 16, 1)
+      END
+    ELSE
+      BEGIN
+        INSERT INTO UserGameItems (ItemId, UserGameId)
+          (SELECT
+             Id,
+             @userGameId
+           FROM Items
+           WHERE MinLevel BETWEEN @minLevel AND @maxLevel)
+
+        IF ((SELECT COUNT(*)
+             FROM Items
+             WHERE MinLevel BETWEEN @minLevel AND @maxLevel) <> @@ROWCOUNT)
+          BEGIN
+            ROLLBACK
+            RAISERROR ('Could not buy items', 16, 1)
+          END
+        ELSE 
+		COMMIT
+      END
+  END
+
+
+
+  SELECT i.Name AS [Item Name]
+FROM UserGameItems AS ugi
+  JOIN Items AS i
+    ON i.Id = ugi.ItemId
+  JOIN UsersGames AS ug
+    ON ug.Id = ugi.UserGameId
+  JOIN Games AS g
+    ON g.Id = ug.GameId
+WHERE g.Name = @gameName
+ORDER BY [Item Name]
+
+
+---------21-----------
+USE [SoftUni]
+SELECT  * FROM EMPLOYEESPROJECTS
+
+CREATE PROC usp_AssignProject(@emloyeeId INT , @projectID INT)
+AS
+ BEGIN
+     BEGIN TRAN
+	 INSERT INTO EMPLOYEESPROJECTS
+	 VALUES (@emloyeeId , @projectID )
+      IF(SELECT COUNT(ProjectId)
+	  FROM EmployeesProjects
+	  WHERE EmployeeId = @emloyeeId) > 3
+	  
+	  BEGIN 
+	     RAISERROR('The employee has too many projects!',16,1)
+	       ROLLBACK
+	     RETURN
+	  END
+
+	   COMMIT
+ END
+
+ ----------22---------
+ CREATE TABLE Deleted_Employees(EmployeeId INT PRIMARY KEY IDENTITY, FirstName NVARCHAR(50),
+  LastName NVARCHAR(50), MiddleName NVARCHAR(50), JobTitle NVARCHAR(50),
+DepartmentId INT , Salary DECIMAL(16,2))
+
+GO
+CREATE TRIGGER	tr_DeleteEmployees
+       ON Employees
+       AFTER DELETE
+AS 
+   BEGIN
+           INSERT INTO Deleted_Employees
+		   SELECT 
+		          FirstName,MiddleName,LastName , JobTitle , DepartmentId , Salary
+		   FROM  deleted  
+    END
+
+

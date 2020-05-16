@@ -1,0 +1,117 @@
+CREATE DATABASE Minions
+
+USE Minions
+
+CREATE TABLE Minions
+(
+Id INT PRIMARY KEY IDENTITY,
+[Name] NVARCHAR (20) NOT NULL,
+Age INT ,
+
+)
+
+CREATE TABLE Towns(
+Id INT PRIMARY KEY IDENTITY,
+[Name] NVARCHAR(20) NOT NULL,
+)
+
+ALTER TABLE Minions
+ADD TownId INT CONSTRAINT FK_TownId_Towns FOREIGN KEY REFERENCES Towns(Id)
+
+SET IDENTITY_INSERT Towns ON
+
+INSERT INTO Towns(Id  , [Name])
+VALUES (1,'Sofia'),
+       (2,'Plovdiv'),
+	   (3,'Varna')
+
+INSERT INTO Minions(Id,[Name],Age,TownId)
+VALUES(1,'Kevin',22,1),
+	             (2,'Bob',15,3),
+				 (3,'Steward',NULL,2)
+
+SET IDENTITY_INSERT Minions OFF
+
+TRUNCATE TABLE Minions 
+DROP TABLE Minions
+DROP TABLE Towns
+
+
+CREATE TABLE People
+(
+ Id INT NOT NULL IDENTITY PRIMARY KEY,
+ [Name] NVARCHAR (200) NOT NULL,
+ Picture VARBINARY(MAX),
+ Height FLOAT,
+ Weight FLOAT,
+ Gender	CHAR(1) NOT NULL CHECK(Gender  in('f', 'm')) , 
+ Birthdate DATE NOT NULL,
+Biography NVARCHAR(MAX)
+)
+
+
+INSERT  People
+([Name], Picture, Height, Weight, Gender, Birthdate, Biography)
+VALUES
+('Gosho', NULL, 1.71, 72.5, 'm', '1989-11-24', 'Some blablasdd'),
+('Pesho', NULL, 1.72, 73.5, 'm', '1989-11-24', 'Some blabladdas'),
+('Gesho', NULL, 1.73, 74.5, 'm', '1989-11-24', 'Some blabladas'),
+('Penka', NULL, 1.60, 50, 'f', '1989-11-24', 'Some blabladasaaa'),
+('Stoyan', NULL, 1.75, 76.5, 'm', '1989-11-24', 'Some blablayerter')
+ 
+
+CREATE TABLE Users
+ (
+ Id  BIGINT NOT NULL IDENTITY PRIMARY KEY,
+ Username	NVARCHAR(30) UNIQUE NOT NULL,
+ Password NVARCHAR(26) UNIQUE NOT NULL,
+ ProfilePicture VARBINARY(MAX) ,
+ LastLoginTime DATETIME NOT NULL,
+ IsDeleted BIT NOT NULL
+ )
+
+ INSERT  Users(Username, Password,ProfilePicture,IsDeleted)
+ VALUES
+ ('AB','1234',NULL,0)
+
+
+--DECLARE @SQL VARCHAR(4000)
+--SET @SQL = 'ALTER TABLE Users DROP CONSTRAINT |constraintName|'
+--SET @SQL = REPLACE(@SQL, '|constraintName|', (SELECT 'name '))
+--9----------
+SET IDENTITY_INSERT Users ON
+
+--ALTER TABLE Users
+--DROP CONSTRAINT --pk_.............
+
+ ALTER TABLE Users
+ADD CONSTRAINT PK_Users_1234 PRIMARY KEY (Id,Username)
+--10-------
+ALTER TABLE Users
+ADD CHECK (Password>5)
+--11------
+ALTER TABLE Users
+ADD DEFAULT GETDATE() FOR LastLoginTime
+--12------
+ALTER TABLE Users
+DROP CONSTRAINT PK_Users_1234
+
+ALTER TABLE Users
+ADD CONSTRAINT CHK_UsernameLength CHECK(LEN(Username) >=3)
+
+
+
+
+
+------15-----
+CREATE DATABASE Hotel
+
+CREATE TABLE Employees
+(
+ Id INT PRIMARY KEY IDENTITY,
+ FirstName NVARCHAR(30) NOT NULL,
+ LastName NVARCHAR(30) NOT NULL,
+ Title NVARCHAR (30) NOT NULL,
+ Notes NVARCHAR (30) NOT NULL
+ )
+
