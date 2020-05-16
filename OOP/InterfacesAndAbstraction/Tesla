@@ -1,0 +1,39 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Cars
+{
+    public class Tesla : Battery
+    {
+       //private Battery batteries;
+      
+        // Battery IElectricCar.Batteries { get =>  batteries ; set => batteries = value; }
+
+        public Tesla(string model , string color , int batteries)
+        {
+            this.Model = model;
+            this.Color = color;
+            this.Batteries = batteries;
+        }
+
+       // public abstract string Batteries { get ; set  ; }
+
+        public override string Start()
+        {
+            return "Engine start";
+        }
+        public override string Stop()
+        {
+            return "Breaaak!";
+        }
+
+        public override string ToString()
+        {
+            StringBuilder stringBuilder = new StringBuilder();
+            stringBuilder.Append($"{this.Color} ").Append("Tesla ").Append($"{this.Model}").Append("with ").AppendLine($"{Batteries} Batteries")
+                .AppendLine($"{Start()}").Append($"{Stop()}");
+            return stringBuilder.ToString().TrimEnd();
+        }
+    }
+}

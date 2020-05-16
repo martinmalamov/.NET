@@ -1,0 +1,35 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Shapes
+{
+    public class Rectangle : Shape
+    {
+        private double height;
+        private double width;
+
+        public Rectangle(double sideA, double sideB)
+        {
+           Height = sideA;
+            Width= sideB;
+        }
+
+        public double Height { get => height; set => height = value; }
+        public double Width { get => width; set => width = value; }
+
+        public override double CalculateArea()
+        {
+            return this.Height * 2 + this.Width * 2;
+        }
+
+        public override double CalculatePerimeter()
+        {
+            return this.Height * this.Width;
+        }
+        public sealed override string Draw()
+        {
+            return base.Draw() + this.GetType().Name;
+        }
+    }
+}

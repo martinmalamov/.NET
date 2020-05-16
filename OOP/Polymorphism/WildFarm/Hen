@@ -1,0 +1,37 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace WildFarm
+{
+    public class Hen : Bird
+    {
+        private const double foodIncrease = 0.35;
+        public Hen(string name, double weight, double wingSize) : base(name, weight, wingSize)
+        {
+        }
+
+        public override void Eat(Food food)
+        {
+            if (food is Meat || food is Vegetable || food is Fruit || food is Seeds)
+            {
+                this.Weight += food.Quantity * foodIncrease;
+
+                this.FoodEaten += food.Quantity;
+            }
+            else
+            {
+                Console.WriteLine($"Hen does not eat {food.GetType().Name}!");
+            }
+        }
+
+        public override void ProduceSound()
+        {
+            Console.WriteLine("Cluck");
+        }
+        public override string ToString()
+        {
+            return base.ToString() + $"Owl [{Name}, {WingSize}, {Weight}, {FoodEaten}]";
+        }
+    }
+}

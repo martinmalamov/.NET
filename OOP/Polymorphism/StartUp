@@ -1,0 +1,16 @@
+using System;
+
+namespace Animals
+{
+    public class StartUp
+    {
+        static void Main(string[] args)
+        {
+            Animal animalCat = new Cat("Pesho","biscuits");
+            Animal animalDog = new Dog("Sharo","nuts");
+
+            Console.WriteLine(animalCat.ExplainSelf());
+            Console.WriteLine(animalDog.ExplainSelf());
+        }
+    }
+}

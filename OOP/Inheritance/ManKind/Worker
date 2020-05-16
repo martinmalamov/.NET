@@ -1,0 +1,77 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace ManKind
+{
+    class Worker:Human
+    {
+
+        private double weekSalary;
+        private double workHoursPerDay;
+
+        public Worker(string firstName, string lastName, double weekSalary, double workHoursPerDay) : base( firstName, lastName)
+        {
+            this.WeekSalary = weekSalary;
+            this.WorkHoursPerDay = workHoursPerDay;
+        }
+
+        public override string LastName
+        {
+            get { return base.LastName; }
+            set
+            {
+                if (LastName.Length < 3)
+                {
+                    throw new ArgumentException("Expected length at least 3 symbols!Argument: lastName ");
+                }
+                base.LastName = value;
+            }
+        }
+
+
+        public double WeekSalary
+        {
+            get => weekSalary;
+            set
+            {
+                if (value <= 10)
+                {
+                    throw new ArgumentException("Expected value mismatch! Argument: weekSalary");
+                }
+                this.weekSalary = value;
+            }
+        }
+        public double WorkHoursPerDay
+        {
+            get => workHoursPerDay;
+            set
+            {
+                if (value < 1 || value >12)
+                {
+                    //var result = this.WeekSalary / value / 5;
+                    throw new ArgumentException("Expected value mismatch! Argument: workHoursPerDay");
+                }
+               
+                this.workHoursPerDay = value;
+            }
+        }
+        public double SalaryPerHour()
+        {
+            var result = this.WeekSalary / WorkHoursPerDay / 5;
+            return result;
+        }
+        public override string ToString()
+        {
+            StringBuilder stringBuilder = new StringBuilder();
+            stringBuilder.Append("First Name: ").AppendLine($"{this.FirstName}")
+               .Append("Last Name: ").AppendLine($"{this.LastName}")
+               .Append("Week Salary: ").AppendLine($"{this.WeekSalary:f2}")
+               .Append("Hours per day: ").AppendLine($"{this.WorkHoursPerDay:f2}")
+               .Append("Salary per hour: ").AppendLine($"{this.SalaryPerHour():f2}")
+               ;
+            return stringBuilder.ToString();
+
+        }
+    }
+}

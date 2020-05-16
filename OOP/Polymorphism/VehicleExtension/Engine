@@ -1,0 +1,97 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace PolymorphizmPractice
+{
+    public class Engine
+    {
+        public void Run()
+        {
+
+            string[] inputCar = Console.ReadLine().Split();
+            string[] inputTruck = Console.ReadLine().Split();
+            string[] busInfo= Console.ReadLine().Split();
+
+            double carFuelQuantity = double.Parse(inputCar[1]);
+            double carFuelConsumption = double.Parse(inputCar[2]);
+            double carTankCapacity = double.Parse(inputCar[3]);
+            
+            double truckFuelQuantity = double.Parse(inputTruck[1]);
+            double truckFuelConsumption = double.Parse(inputTruck[2]);
+            double truckTankCapacity = double.Parse(inputTruck[3]);
+
+            double busFuelQuantity =    double.Parse(busInfo[1]);
+            double busFuelConsumption = double.Parse(busInfo[2]);
+            double busTankCapacity =    double.Parse(busInfo[3]);
+
+            Vehicle car = new Car(carFuelQuantity, carFuelConsumption,carTankCapacity);
+            Vehicle truck = new Truck(truckFuelQuantity, truckFuelConsumption,truckTankCapacity);
+            Vehicle bus = new Bus(busFuelQuantity,busFuelConsumption,busTankCapacity);
+
+            int n = int.Parse(Console.ReadLine());
+            for (int i = 0; i < n; i++)
+            {
+                try
+                {
+                    string[] inputArgs = Console.ReadLine().Split();
+
+                    string action = inputArgs[0];
+                    string vehicleType = inputArgs[1];
+                    double value = int.Parse(inputArgs[2]);
+
+                    if (action == "Refuel")
+                    {
+                        if (vehicleType == "Car")
+                        {
+                            car.Refuel(value);
+                        }
+                        else if (vehicleType == "Truck")
+                        {
+                            truck.Refuel(value);
+                        }
+                        else if(vehicleType == "Bus")
+                        {
+                            bus.Refuel(value);
+                        }
+                    }
+                    else if (action  == "Drive")
+                    {
+                        if (vehicleType == "Car")
+                        {
+                            car.Drive(value);
+                        }
+                        else if (vehicleType == "Truck")
+                        {
+                            truck.Drive(value);
+                        }
+                        else if (vehicleType == "Bus")
+                        {
+                            bus.isVehicleEmpty = false;
+                            bus.Drive(value);
+                        }
+                    }
+                    else if (action == "DriveEmpty")
+                    {
+                        bus.isVehicleEmpty = true;
+                        bus.Drive(value);
+                    }
+
+                }
+
+                catch (ArgumentException ex)
+                {
+
+                    Console.WriteLine(ex.Message);
+                }
+            }
+
+            Console.WriteLine(car);
+            Console.WriteLine(truck);
+            Console.WriteLine(bus);
+
+         
+        }
+    }
+
+}

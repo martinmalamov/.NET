@@ -1,0 +1,15 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace PolymorphizmPractice
+{
+    public class Car : Vehicle
+    {
+        private double airConditionConsumption = 0.9;
+        public Car(double fuelQuntity, double fuelConsumption,double tankCapacity) : base(fuelQuntity, fuelConsumption, tankCapacity)
+        {
+            this.FuelConsumption += airConditionConsumption;
+        }
+    }
+}

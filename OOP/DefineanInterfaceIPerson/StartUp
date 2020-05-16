@@ -1,0 +1,25 @@
+using System;
+
+namespace PersonInfo
+{
+    public class StartUp
+    {
+        static void Main(string[] args)
+        {
+            string name = Console.ReadLine();
+            int age = int.Parse(Console.ReadLine());   
+           
+            string id = Console.ReadLine();
+            string birthDate = Console.ReadLine();
+
+            IIdentifiable citizen = new Citizen(name, age, id, birthDate);
+            IBirthable birthable = new Citizen(name, age, id, birthDate);
+
+            //IPerson person = new Citizen(name, age);
+            //Console.WriteLine(person.Name);
+            //Console.WriteLine(person.Age);
+            Console.WriteLine(citizen.Id);
+            Console.WriteLine(birthable.Birthdate);
+        }
+    }
+}

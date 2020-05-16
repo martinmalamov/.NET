@@ -1,0 +1,18 @@
+using System;
+
+namespace Shapes
+{
+   public  class StartUp
+    {
+        static void Main(string[] args)
+        {
+            Shape shapes = new Rectangle(5.6, 6.8);
+            Console.WriteLine(shapes.CalculateArea());
+            Rectangle shapes2 = new Rectangle(5.6, 6.8);
+            Console.WriteLine(shapes2.CalculateArea());
+
+            Shape cirle = new Circle(7);
+            Console.WriteLine(cirle.CalculateArea());
+        }
+    }
+}

@@ -1,0 +1,11 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace KingsGambit
+{
+  public  class ConsoleWriter : IWroiter
+    {
+        public void WriteLine(string line) => Console.WriteLine(line);
+    }
+}
