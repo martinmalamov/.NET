@@ -1,0 +1,11 @@
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\IteratorsAndCoperatorsPractice\ItertorsAndCompPractice\StackExercise3\bin\Debug\netcoreapp2.1\StackExercise3.deps.json
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\IteratorsAndCoperatorsPractice\ItertorsAndCompPractice\StackExercise3\bin\Debug\netcoreapp2.1\StackExercise3.runtimeconfig.json
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\IteratorsAndCoperatorsPractice\ItertorsAndCompPractice\StackExercise3\bin\Debug\netcoreapp2.1\StackExercise3.runtimeconfig.dev.json
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\IteratorsAndCoperatorsPractice\ItertorsAndCompPractice\StackExercise3\bin\Debug\netcoreapp2.1\StackExercise3.dll
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\IteratorsAndCoperatorsPractice\ItertorsAndCompPractice\StackExercise3\bin\Debug\netcoreapp2.1\StackExercise3.pdb
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\IteratorsAndCoperatorsPractice\ItertorsAndCompPractice\StackExercise3\obj\Debug\netcoreapp2.1\StackExercise3.csprojAssemblyReference.cache
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\IteratorsAndCoperatorsPractice\ItertorsAndCompPractice\StackExercise3\obj\Debug\netcoreapp2.1\StackExercise3.csproj.CoreCompileInputs.cache
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\IteratorsAndCoperatorsPractice\ItertorsAndCompPractice\StackExercise3\obj\Debug\netcoreapp2.1\StackExercise3.AssemblyInfoInputs.cache
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\IteratorsAndCoperatorsPractice\ItertorsAndCompPractice\StackExercise3\obj\Debug\netcoreapp2.1\StackExercise3.AssemblyInfo.cs
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\IteratorsAndCoperatorsPractice\ItertorsAndCompPractice\StackExercise3\obj\Debug\netcoreapp2.1\StackExercise3.dll
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\IteratorsAndCoperatorsPractice\ItertorsAndCompPractice\StackExercise3\obj\Debug\netcoreapp2.1\StackExercise3.pdb

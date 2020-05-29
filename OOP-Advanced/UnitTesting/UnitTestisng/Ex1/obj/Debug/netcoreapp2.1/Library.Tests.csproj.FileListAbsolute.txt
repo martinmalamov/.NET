@@ -1,0 +1,14 @@
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\UnitTesting\UnitTestisng\Ex1\obj\Debug\netcoreapp2.1\Library.Tests.csprojAssemblyReference.cache
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\UnitTesting\UnitTestisng\Ex1\obj\Debug\netcoreapp2.1\Library.Tests.csproj.CoreCompileInputs.cache
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\UnitTesting\UnitTestisng\Ex1\obj\Debug\netcoreapp2.1\Library.Tests.AssemblyInfoInputs.cache
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\UnitTesting\UnitTestisng\Ex1\obj\Debug\netcoreapp2.1\Library.Tests.AssemblyInfo.cs
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\UnitTesting\UnitTestisng\Ex1\bin\Debug\netcoreapp2.1\NUnit3.TestAdapter.dll
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\UnitTesting\UnitTestisng\Ex1\bin\Debug\netcoreapp2.1\NUnit3.TestAdapter.pdb
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\UnitTesting\UnitTestisng\Ex1\bin\Debug\netcoreapp2.1\nunit.engine.netstandard.dll
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\UnitTesting\UnitTestisng\Ex1\bin\Debug\netcoreapp2.1\Library.Tests.deps.json
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\UnitTesting\UnitTestisng\Ex1\bin\Debug\netcoreapp2.1\Library.Tests.runtimeconfig.json
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\UnitTesting\UnitTestisng\Ex1\bin\Debug\netcoreapp2.1\Library.Tests.runtimeconfig.dev.json
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\UnitTesting\UnitTestisng\Ex1\bin\Debug\netcoreapp2.1\Library.Tests.dll
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\UnitTesting\UnitTestisng\Ex1\bin\Debug\netcoreapp2.1\Library.Tests.pdb
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\UnitTesting\UnitTestisng\Ex1\obj\Debug\netcoreapp2.1\Library.Tests.dll
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\UnitTesting\UnitTestisng\Ex1\obj\Debug\netcoreapp2.1\Library.Tests.pdb

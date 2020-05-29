@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ex1", "Ex1\Ex1.csproj", "{F788C95C-2DB1-46BB-BDD7-C048C87D1B3B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IteratorsAndComparators", "Library\IteratorsAndComparators.csproj", "{08AB9BD7-298E-4EB0-9865-95F82C71E35B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F788C95C-2DB1-46BB-BDD7-C048C87D1B3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F788C95C-2DB1-46BB-BDD7-C048C87D1B3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F788C95C-2DB1-46BB-BDD7-C048C87D1B3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F788C95C-2DB1-46BB-BDD7-C048C87D1B3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08AB9BD7-298E-4EB0-9865-95F82C71E35B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08AB9BD7-298E-4EB0-9865-95F82C71E35B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08AB9BD7-298E-4EB0-9865-95F82C71E35B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08AB9BD7-298E-4EB0-9865-95F82C71E35B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {35246210-A9ED-4E28-9930-E90DCC373E89}
+	EndGlobalSection
+EndGlobal

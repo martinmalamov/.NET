@@ -1,0 +1,9 @@
+C:\Users\ASUSK55V\AppData\Local\Temp\Temp1_05. CSharp-OOP-Advanced-Unit-Testing-Exercise-Resources.zip\CustomLinkedList\CustomLinkedList\bin\Debug\netcoreapp2.0\CustomLinkedList.deps.json
+C:\Users\ASUSK55V\AppData\Local\Temp\Temp1_05. CSharp-OOP-Advanced-Unit-Testing-Exercise-Resources.zip\CustomLinkedList\CustomLinkedList\bin\Debug\netcoreapp2.0\CustomLinkedList.dll
+C:\Users\ASUSK55V\AppData\Local\Temp\Temp1_05. CSharp-OOP-Advanced-Unit-Testing-Exercise-Resources.zip\CustomLinkedList\CustomLinkedList\bin\Debug\netcoreapp2.0\CustomLinkedList.pdb
+C:\Users\ASUSK55V\AppData\Local\Temp\Temp1_05. CSharp-OOP-Advanced-Unit-Testing-Exercise-Resources.zip\CustomLinkedList\CustomLinkedList\obj\Debug\netcoreapp2.0\CustomLinkedList.csprojAssemblyReference.cache
+C:\Users\ASUSK55V\AppData\Local\Temp\Temp1_05. CSharp-OOP-Advanced-Unit-Testing-Exercise-Resources.zip\CustomLinkedList\CustomLinkedList\obj\Debug\netcoreapp2.0\CustomLinkedList.csproj.CoreCompileInputs.cache
+C:\Users\ASUSK55V\AppData\Local\Temp\Temp1_05. CSharp-OOP-Advanced-Unit-Testing-Exercise-Resources.zip\CustomLinkedList\CustomLinkedList\obj\Debug\netcoreapp2.0\CustomLinkedList.AssemblyInfoInputs.cache
+C:\Users\ASUSK55V\AppData\Local\Temp\Temp1_05. CSharp-OOP-Advanced-Unit-Testing-Exercise-Resources.zip\CustomLinkedList\CustomLinkedList\obj\Debug\netcoreapp2.0\CustomLinkedList.AssemblyInfo.cs
+C:\Users\ASUSK55V\AppData\Local\Temp\Temp1_05. CSharp-OOP-Advanced-Unit-Testing-Exercise-Resources.zip\CustomLinkedList\CustomLinkedList\obj\Debug\netcoreapp2.0\CustomLinkedList.dll
+C:\Users\ASUSK55V\AppData\Local\Temp\Temp1_05. CSharp-OOP-Advanced-Unit-Testing-Exercise-Resources.zip\CustomLinkedList\CustomLinkedList\obj\Debug\netcoreapp2.0\CustomLinkedList.pdb

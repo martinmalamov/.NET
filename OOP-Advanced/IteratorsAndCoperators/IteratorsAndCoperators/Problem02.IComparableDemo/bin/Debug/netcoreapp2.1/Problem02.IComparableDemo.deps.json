@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.1": {
+      "Problem02.IComparableDemo/1.0.0": {
+        "runtime": {
+          "Problem02.IComparableDemo.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Problem02.IComparableDemo/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

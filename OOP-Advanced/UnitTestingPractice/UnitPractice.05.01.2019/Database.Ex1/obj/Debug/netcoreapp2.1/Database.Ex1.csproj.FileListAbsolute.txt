@@ -1,0 +1,11 @@
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\UnitTestingPractice\UnitPractice.05.01.2019\Database.Ex1\bin\Debug\netcoreapp2.1\Database.Ex1.deps.json
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\UnitTestingPractice\UnitPractice.05.01.2019\Database.Ex1\bin\Debug\netcoreapp2.1\Database.Ex1.runtimeconfig.json
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\UnitTestingPractice\UnitPractice.05.01.2019\Database.Ex1\bin\Debug\netcoreapp2.1\Database.Ex1.runtimeconfig.dev.json
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\UnitTestingPractice\UnitPractice.05.01.2019\Database.Ex1\bin\Debug\netcoreapp2.1\Database.Ex1.dll
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\UnitTestingPractice\UnitPractice.05.01.2019\Database.Ex1\obj\Debug\netcoreapp2.1\Database.Ex1.csprojAssemblyReference.cache
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\UnitTestingPractice\UnitPractice.05.01.2019\Database.Ex1\obj\Debug\netcoreapp2.1\Database.Ex1.csproj.CoreCompileInputs.cache
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\UnitTestingPractice\UnitPractice.05.01.2019\Database.Ex1\obj\Debug\netcoreapp2.1\Database.Ex1.AssemblyInfoInputs.cache
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\UnitTestingPractice\UnitPractice.05.01.2019\Database.Ex1\obj\Debug\netcoreapp2.1\Database.Ex1.AssemblyInfo.cs
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\UnitTestingPractice\UnitPractice.05.01.2019\Database.Ex1\bin\Debug\netcoreapp2.1\Database.Ex1.pdb
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\UnitTestingPractice\UnitPractice.05.01.2019\Database.Ex1\obj\Debug\netcoreapp2.1\Database.Ex1.dll
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\UnitTestingPractice\UnitPractice.05.01.2019\Database.Ex1\obj\Debug\netcoreapp2.1\Database.Ex1.pdb

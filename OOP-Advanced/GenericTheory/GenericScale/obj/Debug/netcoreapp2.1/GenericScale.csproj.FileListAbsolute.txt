@@ -1,0 +1,11 @@
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\GenericTheory\GenericScale\bin\Debug\netcoreapp2.1\GenericScale.deps.json
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\GenericTheory\GenericScale\bin\Debug\netcoreapp2.1\GenericScale.runtimeconfig.json
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\GenericTheory\GenericScale\bin\Debug\netcoreapp2.1\GenericScale.runtimeconfig.dev.json
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\GenericTheory\GenericScale\bin\Debug\netcoreapp2.1\GenericScale.dll
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\GenericTheory\GenericScale\bin\Debug\netcoreapp2.1\GenericScale.pdb
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\GenericTheory\GenericScale\obj\Debug\netcoreapp2.1\GenericScale.csprojAssemblyReference.cache
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\GenericTheory\GenericScale\obj\Debug\netcoreapp2.1\GenericScale.csproj.CoreCompileInputs.cache
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\GenericTheory\GenericScale\obj\Debug\netcoreapp2.1\GenericScale.AssemblyInfoInputs.cache
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\GenericTheory\GenericScale\obj\Debug\netcoreapp2.1\GenericScale.AssemblyInfo.cs
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\GenericTheory\GenericScale\obj\Debug\netcoreapp2.1\GenericScale.dll
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\GenericTheory\GenericScale\obj\Debug\netcoreapp2.1\GenericScale.pdb

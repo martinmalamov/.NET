@@ -1,0 +1,10 @@
+C:\Users\Martin\Desktop\SU.Courses\OOP-Advanced\OOP-Advanced\IteratorsAndCoperators\IteratorsAndCoperators\SpecialProblem\obj\Debug\netcoreapp2.1\SpecialProblem.csprojAssemblyReference.cache
+C:\Users\Martin\Desktop\SU.Courses\OOP-Advanced\OOP-Advanced\IteratorsAndCoperators\IteratorsAndCoperators\SpecialProblem\obj\Debug\netcoreapp2.1\SpecialProblem.AssemblyInfoInputs.cache
+C:\Users\Martin\Desktop\SU.Courses\OOP-Advanced\OOP-Advanced\IteratorsAndCoperators\IteratorsAndCoperators\SpecialProblem\obj\Debug\netcoreapp2.1\SpecialProblem.AssemblyInfo.cs
+C:\Users\Martin\Desktop\SU.Courses\OOP-Advanced\OOP-Advanced\IteratorsAndCoperators\IteratorsAndCoperators\SpecialProblem\bin\Debug\netcoreapp2.1\SpecialProblem.deps.json
+C:\Users\Martin\Desktop\SU.Courses\OOP-Advanced\OOP-Advanced\IteratorsAndCoperators\IteratorsAndCoperators\SpecialProblem\bin\Debug\netcoreapp2.1\SpecialProblem.runtimeconfig.json
+C:\Users\Martin\Desktop\SU.Courses\OOP-Advanced\OOP-Advanced\IteratorsAndCoperators\IteratorsAndCoperators\SpecialProblem\bin\Debug\netcoreapp2.1\SpecialProblem.runtimeconfig.dev.json
+C:\Users\Martin\Desktop\SU.Courses\OOP-Advanced\OOP-Advanced\IteratorsAndCoperators\IteratorsAndCoperators\SpecialProblem\bin\Debug\netcoreapp2.1\SpecialProblem.dll
+C:\Users\Martin\Desktop\SU.Courses\OOP-Advanced\OOP-Advanced\IteratorsAndCoperators\IteratorsAndCoperators\SpecialProblem\bin\Debug\netcoreapp2.1\SpecialProblem.pdb
+C:\Users\Martin\Desktop\SU.Courses\OOP-Advanced\OOP-Advanced\IteratorsAndCoperators\IteratorsAndCoperators\SpecialProblem\obj\Debug\netcoreapp2.1\SpecialProblem.dll
+C:\Users\Martin\Desktop\SU.Courses\OOP-Advanced\OOP-Advanced\IteratorsAndCoperators\IteratorsAndCoperators\SpecialProblem\obj\Debug\netcoreapp2.1\SpecialProblem.pdb

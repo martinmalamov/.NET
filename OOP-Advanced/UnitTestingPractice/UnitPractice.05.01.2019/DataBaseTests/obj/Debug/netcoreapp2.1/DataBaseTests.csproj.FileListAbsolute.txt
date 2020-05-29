@@ -1,0 +1,17 @@
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\UnitTestingPractice\UnitPractice.05.01.2019\DataBaseTests\bin\Debug\netcoreapp2.1\DataBaseTests.deps.json
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\UnitTestingPractice\UnitPractice.05.01.2019\DataBaseTests\bin\Debug\netcoreapp2.1\DataBaseTests.dll
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\UnitTestingPractice\UnitPractice.05.01.2019\DataBaseTests\obj\Debug\netcoreapp2.1\DataBaseTests.csprojAssemblyReference.cache
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\UnitTestingPractice\UnitPractice.05.01.2019\DataBaseTests\obj\Debug\netcoreapp2.1\DataBaseTests.csproj.CoreCompileInputs.cache
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\UnitTestingPractice\UnitPractice.05.01.2019\DataBaseTests\obj\Debug\netcoreapp2.1\DataBaseTests.AssemblyInfoInputs.cache
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\UnitTestingPractice\UnitPractice.05.01.2019\DataBaseTests\obj\Debug\netcoreapp2.1\DataBaseTests.AssemblyInfo.cs
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\UnitTestingPractice\UnitPractice.05.01.2019\DataBaseTests\bin\Debug\netcoreapp2.1\NUnit3.TestAdapter.dll
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\UnitTestingPractice\UnitPractice.05.01.2019\DataBaseTests\bin\Debug\netcoreapp2.1\NUnit3.TestAdapter.pdb
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\UnitTestingPractice\UnitPractice.05.01.2019\DataBaseTests\bin\Debug\netcoreapp2.1\nunit.engine.netstandard.dll
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\UnitTestingPractice\UnitPractice.05.01.2019\DataBaseTests\bin\Debug\netcoreapp2.1\DataBaseTests.runtimeconfig.json
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\UnitTestingPractice\UnitPractice.05.01.2019\DataBaseTests\bin\Debug\netcoreapp2.1\DataBaseTests.runtimeconfig.dev.json
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\UnitTestingPractice\UnitPractice.05.01.2019\DataBaseTests\bin\Debug\netcoreapp2.1\DataBaseTests.pdb
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\UnitTestingPractice\UnitPractice.05.01.2019\DataBaseTests\bin\Debug\netcoreapp2.1\Database.Ex1.dll
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\UnitTestingPractice\UnitPractice.05.01.2019\DataBaseTests\bin\Debug\netcoreapp2.1\Database.Ex1.pdb
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\UnitTestingPractice\UnitPractice.05.01.2019\DataBaseTests\obj\Debug\netcoreapp2.1\DataBaseTests.csproj.CopyComplete
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\UnitTestingPractice\UnitPractice.05.01.2019\DataBaseTests\obj\Debug\netcoreapp2.1\DataBaseTests.dll
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\UnitTestingPractice\UnitPractice.05.01.2019\DataBaseTests\obj\Debug\netcoreapp2.1\DataBaseTests.pdb

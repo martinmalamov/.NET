@@ -1,0 +1,11 @@
+C:\Users\ASUSK55V\source\repos\ReflectionExamples\Ex5\bin\Debug\netcoreapp2.1\Ex5.deps.json
+C:\Users\ASUSK55V\source\repos\ReflectionExamples\Ex5\bin\Debug\netcoreapp2.1\Ex5.runtimeconfig.json
+C:\Users\ASUSK55V\source\repos\ReflectionExamples\Ex5\bin\Debug\netcoreapp2.1\Ex5.runtimeconfig.dev.json
+C:\Users\ASUSK55V\source\repos\ReflectionExamples\Ex5\bin\Debug\netcoreapp2.1\Ex5.dll
+C:\Users\ASUSK55V\source\repos\ReflectionExamples\Ex5\bin\Debug\netcoreapp2.1\Ex5.pdb
+C:\Users\ASUSK55V\source\repos\ReflectionExamples\Ex5\obj\Debug\netcoreapp2.1\Ex5.csprojAssemblyReference.cache
+C:\Users\ASUSK55V\source\repos\ReflectionExamples\Ex5\obj\Debug\netcoreapp2.1\Ex5.csproj.CoreCompileInputs.cache
+C:\Users\ASUSK55V\source\repos\ReflectionExamples\Ex5\obj\Debug\netcoreapp2.1\Ex5.AssemblyInfoInputs.cache
+C:\Users\ASUSK55V\source\repos\ReflectionExamples\Ex5\obj\Debug\netcoreapp2.1\Ex5.AssemblyInfo.cs
+C:\Users\ASUSK55V\source\repos\ReflectionExamples\Ex5\obj\Debug\netcoreapp2.1\Ex5.dll
+C:\Users\ASUSK55V\source\repos\ReflectionExamples\Ex5\obj\Debug\netcoreapp2.1\Ex5.pdb

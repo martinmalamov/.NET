@@ -1,0 +1,11 @@
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\IteratorsAndCoperatorsPractice\ItertorsAndCompPractice\Person\obj\Debug\netcoreapp2.1\Person.csproj.CoreCompileInputs.cache
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\IteratorsAndCoperatorsPractice\ItertorsAndCompPractice\Person\obj\Debug\netcoreapp2.1\Person.AssemblyInfoInputs.cache
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\IteratorsAndCoperatorsPractice\ItertorsAndCompPractice\Person\obj\Debug\netcoreapp2.1\Person.AssemblyInfo.cs
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\IteratorsAndCoperatorsPractice\ItertorsAndCompPractice\Person\bin\Debug\netcoreapp2.1\Person.deps.json
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\IteratorsAndCoperatorsPractice\ItertorsAndCompPractice\Person\bin\Debug\netcoreapp2.1\Person.runtimeconfig.json
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\IteratorsAndCoperatorsPractice\ItertorsAndCompPractice\Person\bin\Debug\netcoreapp2.1\Person.runtimeconfig.dev.json
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\IteratorsAndCoperatorsPractice\ItertorsAndCompPractice\Person\bin\Debug\netcoreapp2.1\Person.dll
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\IteratorsAndCoperatorsPractice\ItertorsAndCompPractice\Person\bin\Debug\netcoreapp2.1\Person.pdb
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\IteratorsAndCoperatorsPractice\ItertorsAndCompPractice\Person\obj\Debug\netcoreapp2.1\Person.dll
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\IteratorsAndCoperatorsPractice\ItertorsAndCompPractice\Person\obj\Debug\netcoreapp2.1\Person.pdb
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\IteratorsAndCoperatorsPractice\ItertorsAndCompPractice\Person\obj\Debug\netcoreapp2.1\Person.csprojAssemblyReference.cache

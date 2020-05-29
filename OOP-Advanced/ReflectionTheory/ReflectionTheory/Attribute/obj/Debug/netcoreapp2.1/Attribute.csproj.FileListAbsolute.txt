@@ -1,0 +1,11 @@
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\ReflectionTheory\ReflectionTheory\Attribute\bin\Debug\netcoreapp2.1\Attribute.deps.json
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\ReflectionTheory\ReflectionTheory\Attribute\bin\Debug\netcoreapp2.1\Attribute.runtimeconfig.json
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\ReflectionTheory\ReflectionTheory\Attribute\bin\Debug\netcoreapp2.1\Attribute.runtimeconfig.dev.json
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\ReflectionTheory\ReflectionTheory\Attribute\bin\Debug\netcoreapp2.1\Attribute.dll
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\ReflectionTheory\ReflectionTheory\Attribute\bin\Debug\netcoreapp2.1\Attribute.pdb
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\ReflectionTheory\ReflectionTheory\Attribute\obj\Debug\netcoreapp2.1\Attribute.csprojAssemblyReference.cache
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\ReflectionTheory\ReflectionTheory\Attribute\obj\Debug\netcoreapp2.1\Attribute.csproj.CoreCompileInputs.cache
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\ReflectionTheory\ReflectionTheory\Attribute\obj\Debug\netcoreapp2.1\Attribute.AssemblyInfoInputs.cache
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\ReflectionTheory\ReflectionTheory\Attribute\obj\Debug\netcoreapp2.1\Attribute.AssemblyInfo.cs
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\ReflectionTheory\ReflectionTheory\Attribute\obj\Debug\netcoreapp2.1\Attribute.dll
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\ReflectionTheory\ReflectionTheory\Attribute\obj\Debug\netcoreapp2.1\Attribute.pdb

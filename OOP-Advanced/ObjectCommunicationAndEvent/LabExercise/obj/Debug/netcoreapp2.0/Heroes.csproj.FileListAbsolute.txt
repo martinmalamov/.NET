@@ -1,0 +1,11 @@
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\ObjectCommunicationAndEvent\bin\Debug\netcoreapp2.0\Heroes.deps.json
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\ObjectCommunicationAndEvent\bin\Debug\netcoreapp2.0\Heroes.runtimeconfig.json
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\ObjectCommunicationAndEvent\bin\Debug\netcoreapp2.0\Heroes.runtimeconfig.dev.json
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\ObjectCommunicationAndEvent\bin\Debug\netcoreapp2.0\Heroes.dll
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\ObjectCommunicationAndEvent\bin\Debug\netcoreapp2.0\Heroes.pdb
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\ObjectCommunicationAndEvent\obj\Debug\netcoreapp2.0\Heroes.csprojAssemblyReference.cache
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\ObjectCommunicationAndEvent\obj\Debug\netcoreapp2.0\Heroes.csproj.CoreCompileInputs.cache
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\ObjectCommunicationAndEvent\obj\Debug\netcoreapp2.0\Heroes.AssemblyInfoInputs.cache
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\ObjectCommunicationAndEvent\obj\Debug\netcoreapp2.0\Heroes.AssemblyInfo.cs
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\ObjectCommunicationAndEvent\obj\Debug\netcoreapp2.0\Heroes.dll
+C:\Users\ASUSK55V\Desktop\OOP-Advanced\ObjectCommunicationAndEvent\obj\Debug\netcoreapp2.0\Heroes.pdb

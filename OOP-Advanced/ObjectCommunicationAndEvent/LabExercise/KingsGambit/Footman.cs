@@ -1,0 +1,18 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace KingsGambit
+{
+    public class Footman : Soldier
+    {
+        public Footman(string name, IWroiter writer) : base(name, writer)
+        {
+        }
+
+        public override void KingUnderAttack(object sender, EventArgs e)
+        {
+            this.Writer.WriteLine($"Footman {this.Name} is panicking!");
+        }
+    }
+}

@@ -1,0 +1,11 @@
+C:\Users\ASUSK55V\source\repos\ReflectionExamples\CustomClassEx8\obj\Debug\netcoreapp2.1\CustomClassEx8.csprojAssemblyReference.cache
+C:\Users\ASUSK55V\source\repos\ReflectionExamples\CustomClassEx8\obj\Debug\netcoreapp2.1\CustomClassEx8.csproj.CoreCompileInputs.cache
+C:\Users\ASUSK55V\source\repos\ReflectionExamples\CustomClassEx8\obj\Debug\netcoreapp2.1\CustomClassEx8.AssemblyInfoInputs.cache
+C:\Users\ASUSK55V\source\repos\ReflectionExamples\CustomClassEx8\obj\Debug\netcoreapp2.1\CustomClassEx8.AssemblyInfo.cs
+C:\Users\ASUSK55V\source\repos\ReflectionExamples\CustomClassEx8\bin\Debug\netcoreapp2.1\CustomClassEx8.deps.json
+C:\Users\ASUSK55V\source\repos\ReflectionExamples\CustomClassEx8\bin\Debug\netcoreapp2.1\CustomClassEx8.runtimeconfig.json
+C:\Users\ASUSK55V\source\repos\ReflectionExamples\CustomClassEx8\bin\Debug\netcoreapp2.1\CustomClassEx8.runtimeconfig.dev.json
+C:\Users\ASUSK55V\source\repos\ReflectionExamples\CustomClassEx8\bin\Debug\netcoreapp2.1\CustomClassEx8.dll
+C:\Users\ASUSK55V\source\repos\ReflectionExamples\CustomClassEx8\bin\Debug\netcoreapp2.1\CustomClassEx8.pdb
+C:\Users\ASUSK55V\source\repos\ReflectionExamples\CustomClassEx8\obj\Debug\netcoreapp2.1\CustomClassEx8.dll
+C:\Users\ASUSK55V\source\repos\ReflectionExamples\CustomClassEx8\obj\Debug\netcoreapp2.1\CustomClassEx8.pdb
