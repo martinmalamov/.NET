@@ -1,1 +1,0 @@
-MOCK , reflection , NUnit ([Test] , Assert), solid principles  , generics , iterators and coperators 
